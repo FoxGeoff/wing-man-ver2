@@ -6,19 +6,22 @@ import { AppComponent } from './app.component';
 import { AccountsComponent } from './account/accounts/accounts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
+import { ScrollTopService } from './scroll-top.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccountsComponent
+    AccountsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    NgxScrollTopModule
   ],
-  providers: [],
+  providers: [ScrollTopService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
